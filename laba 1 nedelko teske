@@ -1,0 +1,276 @@
+**задание 1**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.WriteLine("Введите количество секунд:(k)");
+      int k=Convert.ToInt32(Console.ReadLine());
+      int h=k/3600;
+      int m=(k%3600)/60;
+      int sek=k%60;
+      Console.WriteLine($"Часы: {h}, Минуты:{m}, Секунды: {sek}");
+    }
+}
+
+
+
+**задание 2**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.WriteLine("Введите основание a:(a)");
+      double a=Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine("Введите основание b:(b)");
+      double b=Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine("Введите основание h:(c)");
+      double h=Convert.ToDouble(Console.ReadLine());
+      Console.Write("Площадь трапеции: ");
+      double s=((a+b)/2)*h;
+      Console.WriteLine(s);
+      double s1=h/3.0*(a+b+Math.Sqrt(a * b));
+      Console.WriteLine($"Объем усеченного конуса:{s1}");   
+
+    }
+}
+
+
+
+
+**задание3**
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите радиус шара:");
+      double r=Convert.ToDouble(Console.ReadLine());
+      double s1=4.0/3.0*Math.PI*Math.Pow(r, 3);
+      double s2=Math.PI*Math.Pow(r,2);
+      double k=s1/s2;
+      Console.WriteLine($"Объём шара:{s1}. Площадь круга:{s2}. Отношение:{k}");
+
+    }
+}
+
+
+**задание 4**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.WriteLine("Введи a");
+      double a=Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine("Введи b");
+      double b=Convert.ToDouble(Console.ReadLine());
+      Console.WriteLine("Введи c");
+      double c=Convert.ToDouble(Console.ReadLine());
+      double m1=0.5*Math.Sqrt(2*b*b+2*c*c-a*a), m2=0.5*Math.Sqrt(2*a*a+2*c*c-b*b), m3= 0.5*Math.Sqrt(2*a*a+2*b*b-c*c);
+      Console.WriteLine($"М1:{m1}  M2:{m2}   M3:{m3}");
+
+    }
+}
+
+
+
+
+**задание 5**
+
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите R и h: ");
+      string[] p=Console.ReadLine().Split(' ');
+      double R = Convert.ToDouble(p[0]);
+      double h = Convert.ToDouble(p[1]);
+      double l = Math.Sqrt(R * R + h * h);
+      double s = Math.PI * R * (R + l);
+      double v = Math.PI * R * R * h / 3.0;
+      Console.WriteLine($"Площадь поверхности: {s:F3}");
+      Console.WriteLine($"Объём конуса: {v:F3}");
+
+    }
+}
+
+
+
+
+**задание 6**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+        Console.Write("Введите R: ");
+        double R=Convert.ToDouble(Console.ReadLine());
+        double v=4.0/3.0*Math.PI*Math.Pow(R, 3);
+        double s=4.0*Math.PI*R*R;
+        Console.WriteLine($"Объём шара: {Math.Round(v, 3)}");
+        Console.WriteLine($"Площадь поверхности: {Math.Round(s, 3)}");
+
+    }
+}
+
+
+
+
+**задание 7**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введи x1, y1, x2, y2: ");
+      string[] p=Console.ReadLine().Split(' ');
+      double x1=Convert.ToDouble(p[0]);
+      double y1=Convert.ToDouble(p[1]);
+      double x2=Convert.ToDouble(p[2]);
+      double y2=Convert.ToDouble(p[3]);
+      double d=Math.Sqrt(Math.Pow(x2-x1,2)+Math.Pow(y2-y1,2));
+      Console.WriteLine($"Расстояние между точками: {d:F3}");
+    }
+}
+
+**задание 8**
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите a и b через пробел: ");
+      string[] p=Console.ReadLine().Split(' ');
+      double a=Convert.ToDouble(p[0]);
+      double b=Convert.ToDouble(p[1]);
+      double d=a-b;
+      double absD=Math.Sqrt(d*d);
+      double max=(a+b+absD)/2.0;
+      Console.WriteLine($"макс: {max}");
+    }
+}
+
+
+**задание 9**
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите a и b: ");
+      string[] p=Console.ReadLine().Split(' ');
+      int a=Convert.ToInt32(p[0]);
+      int b = Convert.ToInt32(p[1]);
+      Console.WriteLine($"До:a={a},b={b}");
+      a=a+b;
+      b=a-b;
+      a=a-b;
+      Console.WriteLine($"После: a = {a}, b = {b}"); 
+    }
+}
+
+
+
+**задание 10**
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите три целых числа: ");
+      string[] p=Console.ReadLine().Split(' ');
+      int a=Convert.ToInt32(p[0]);
+      int b=Convert.ToInt32(p[1]);
+      int c=Convert.ToInt32(p[2]);
+      double avg=(a+b+c)/3.0;
+      Console.WriteLine($"Среднее арифметическое: {avg:F2}");
+    }
+}
+
+
+
+**задание 11**
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите стоимость трёх товаров через пробел: ");
+      string[] p=Console.ReadLine().Split(' ');
+      double p1=Convert.ToDouble(p[0]);
+      double p2=Convert.ToDouble(p[1]);
+      double p3=Convert.ToDouble(p[2]);
+      double t=(p1+p2+p3)*0.13;
+      Console.WriteLine($"Общая сумма: {t:F1}");
+    }
+}
+
+
+
+**задание 12**
+
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите трёхзначное число: "); 
+      int n = Convert.ToInt32(Console.ReadLine());
+      int h=n/100;
+      int t=(n / 10) % 10;
+      int u=n%10;
+      int sum=h+t+u;
+      Console.WriteLine($"Ответ: {n}: {sum}");
+    }
+}
+
+
+
+**задание 13**
+
+
+using System;
+class Ex
+{
+    static void Main()
+    {
+      Console.Write("Введите катеты a и b через пробел: ");
+      string[] p=Console.ReadLine().Split(' ');
+      double a=Convert.ToDouble(p[0]);
+      double b=Convert.ToDouble(p[1]);
+      double h=Math.Sqrt(a*a+b*b);
+      Console.WriteLine($"Гипотенуза: {h:F5}");
+    }
+}
